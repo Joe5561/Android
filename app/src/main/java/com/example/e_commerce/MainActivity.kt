@@ -37,10 +37,13 @@ class MainActivity : AppCompatActivity() {
 
                     val resultado = buildString {
                         appendLine("Nome: ${user.name}")
+                        appendLine("cpf: ${user.cpf}")
                         appendLine("Email: ${user.email}")
                         appendLine("Telefone: ${user.telefone}")
                         if (endereco != null) {
                             appendLine("Endereço: ${endereco.logradouro}, ${endereco.numero}")
+                            appendLine("Numero: ${endereco.numero}")
+                            appendLine("complemento: ${endereco.complemento}")
                             appendLine("Bairro: ${endereco.bairro}")
                             appendLine("CEP: ${endereco.cep}")
                         }
