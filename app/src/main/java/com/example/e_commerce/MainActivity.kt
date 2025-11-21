@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -25,6 +26,7 @@ class MainActivity : AppCompatActivity() {
 
         val btnBuscar = findViewById<Button>(R.id.btnBuscar)
         val inputCpf = findViewById<EditText>(R.id.inputCpf)
+        val progressBar = findViewById<ProgressBar>(R.id.progressBar)
         val cardResultado = findViewById<View>(R.id.cardResultado)
 
         val presenter = UserPresenter(
@@ -50,8 +52,11 @@ class MainActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
             btnBuscar.isEnabled = false
+            progressBar.visibility = View.VISIBLE
+
             presenter.buscarUsuario(documento, lifecycleScope, this)
             btnBuscar.isEnabled = true
+            progressBar.visibility = View.GONE
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->

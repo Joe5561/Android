@@ -21,7 +21,10 @@ class UserPresenter(
     private val txtBairro: TextView,
     private val txtCep: TextView
 ){
-    fun buscarUsuario(documento: String, scope: LifecycleCoroutineScope, context: android.content.Context) {
+    fun buscarUsuario(documento: String,
+                      scope: LifecycleCoroutineScope,
+                      context: android.content.Context,
+                      onFinish: () -> Unit = {}) {
         scope.launch {
             try {
                 val api = RetrofitClient.instance.create(UserApi::class.java)
@@ -57,6 +60,8 @@ class UserPresenter(
             } catch (e: Exception) {
                 cardResultado.visibility = View.GONE
                 Toast.makeText(context, "Erro ao buscar usuário: ${e.message}", Toast.LENGTH_SHORT).show()
+            } finally {
+                onFinish()
             }
         }
     }
