@@ -39,7 +39,6 @@ class UserPresenter(
 
                 // Preenche dados do endereço
                 if (endereco != null) {
-                    txtIdEndereco.text = "ID Endereço: ${endereco.id}"
                     txtLogradouro.text = "Logradouro: ${endereco.logradouro}"
                     txtNumero.text = "Número: ${endereco.numero}"
                     txtComplemento.text = "Complemento: ${endereco.complemento}"
