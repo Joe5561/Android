@@ -35,7 +35,6 @@ class MainActivity : AppCompatActivity() {
             findViewById(R.id.txtCpf),
             findViewById(R.id.txtEmail),
             findViewById(R.id.txtTelefone),
-            findViewById(R.id.txtIdEndereco),
             findViewById(R.id.txtLogradouro),
             findViewById(R.id.txtNumero),
             findViewById(R.id.txtComplemento),

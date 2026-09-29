@@ -14,7 +14,7 @@ class UserPresenter(
     private val txtCpf: TextView,
     private val txtEmail: TextView,
     private val txtTelefone: TextView,
-    private val txtIdEndereco: TextView,
+    //private val txtIdEndereco: TextView,
     private val txtLogradouro: TextView,
     private val txtNumero: TextView,
     private val txtComplemento: TextView,
@@ -45,7 +45,7 @@ class UserPresenter(
                     txtBairro.text = "Bairro: ${endereco.bairro}"
                     txtCep.text = "CEP: ${endereco.cep}"
                 } else {
-                    txtIdEndereco.text = "Endereço: não informado"
+                    //txtIdEndereco.text = "Endereço: não informado"
                     txtLogradouro.text = ""
                     txtNumero.text = ""
                     txtComplemento.text = ""

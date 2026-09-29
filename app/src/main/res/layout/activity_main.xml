@@ -65,7 +65,6 @@
             <TextView android:id="@+id/txtCpf" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="CPF:" />
             <TextView android:id="@+id/txtEmail" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Email:" />
             <TextView android:id="@+id/txtTelefone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Telefone:" />
-            <TextView android:id="@+id/txtIdEndereco" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ID Endereço:" />
             <TextView android:id="@+id/txtLogradouro" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Logradouro:" />
             <TextView android:id="@+id/txtNumero" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Número:" />
             <TextView android:id="@+id/txtComplemento" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Complemento:" />
