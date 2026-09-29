@@ -52,6 +52,7 @@ class MainActivity : AppCompatActivity() {
             }
             btnBuscar.isEnabled = false
             progressBar.visibility = View.VISIBLE
+            inputCpf.text.clear()
 
             presenter.buscarUsuario(documento, lifecycleScope, this)
             btnBuscar.isEnabled = true
